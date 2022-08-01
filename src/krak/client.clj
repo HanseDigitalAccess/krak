@@ -116,3 +116,9 @@
 (def withdraw-cancel
   (private-req "/0/private/WithdrawCancel"
                {:aclass {:optional true} :asset {} :refid {}}))
+
+;; STAKING
+
+(def staking-transactions
+  (private-req "/0/private/Staking/Transaction"
+               {}))
