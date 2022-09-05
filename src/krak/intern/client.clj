@@ -1,10 +1,14 @@
 (ns krak.intern.client
   (:require [org.httpkit.client :as http]
+            [org.httpkit.sni-client :as sni-client]
             [pandect.algo.sha512 :refer [sha512-hmac-bytes]]
             [pandect.algo.sha256 :refer [sha256-bytes]]
             [clojure.data.codec.base64 :as b64]
             [clojure.data.json :as json]
             [clojure.set :as set]))
+
+(alter-var-root #'org.httpkit.client/*default-client*
+                (fn [_] sni-client/default-client))
 
 (def KRAKEN-API "https://api.kraken.com")
 
