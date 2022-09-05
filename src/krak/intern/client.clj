@@ -47,9 +47,8 @@
   (let [response @(http/post (str KRAKEN-API path)
                              {:body data :headers headers})
         resp-data (json/read-str (:body response))]
-    (merge response {:data resp-data
-                     :krak/result (resp-data "result")
-                     :krak/error (resp-data "error")})))
+    (merge response {:data {:krak/result (resp-data "result")
+                            :krak/error (resp-data "error")}})))
 
 (defn private-req [path inputs]
   (fn [ctx & {:as opts}]
