@@ -120,5 +120,5 @@
 ;; STAKING
 
 (def staking-transactions
-  (private-req "/0/private/Staking/Transaction"
+  (private-req "/0/private/Staking/Transactions"
                {}))
