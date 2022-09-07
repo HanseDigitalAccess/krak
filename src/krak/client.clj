@@ -7,7 +7,7 @@
          :secret-key secret-key
          :nonce-offset (long nonce-offset)}))
 
-(def time (public-req "/0/public/Time" {}))
+(def k-time (public-req "/0/public/Time" {}))
 (def assets
   (public-req "/0/public/Assets"
               {:info {:optional true}
