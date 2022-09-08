@@ -3,7 +3,7 @@
   :url "http://github.com/keymone/krak"
   :license {:name "MIT License"
             :url "https://opensource.org/licenses/MIT"}
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.11.0"]
                  [http-kit "2.6.0"]
                  [pandect "0.6.1"]
                  [org.clojure/data.codec "0.1.0"]
